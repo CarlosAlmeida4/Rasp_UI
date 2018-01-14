@@ -12,9 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Net.Sockets;
-using System.IO;
-using System.Net;
+
 
 namespace Rasp_UI
 {
@@ -30,34 +28,10 @@ namespace Rasp_UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
-                TcpClient tcpclnt = new TcpClient();
-                Console.WriteLine("Connecting.....");
 
-                tcpclnt.Connect("192.168.1.83", 8001);
-                // use the ipaddress as in the server program
-
-                Console.WriteLine("Connected");
-                /*Console.Write("Enter the string to be transmitted : ");
-
-                String str = Console.ReadLine();
-                Stream stm = tcpclnt.GetStream();
-
-                ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes(str);
-                Console.WriteLine("Transmitting.....");
-
-                stm.Write(ba, 0, ba.Length);
-
-                byte[] bb = new byte[100];
-                int k = stm.Read(bb, 0, 100);
-
-                for (int i = 0; i < k; i++)
-                    Console.Write(Convert.ToChar(bb[i]));
-
-                tcpclnt.Close();*/
-            
-
+            Window1 window = new Window1();
+            this.Close();
+            window.Show();
             
         }
     }

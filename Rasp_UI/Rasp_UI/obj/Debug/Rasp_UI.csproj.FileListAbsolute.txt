@@ -13,3 +13,5 @@ C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI\Rasp_UI\obj\Debug\Rasp_UI.cspro
 C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI\Rasp_UI\obj\Debug\Rasp_UI.csproj.CoreCompileInputs.cache
 C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI\Rasp_UI\obj\Debug\Rasp_UI.exe
 C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI\Rasp_UI\obj\Debug\Rasp_UI.pdb
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI\Rasp_UI\obj\Debug\Window1.g.cs
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI\Rasp_UI\obj\Debug\Window1.baml
