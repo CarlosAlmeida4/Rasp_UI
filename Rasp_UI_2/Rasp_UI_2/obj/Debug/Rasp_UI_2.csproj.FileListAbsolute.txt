@@ -1,0 +1,14 @@
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\bin\Debug\Rasp_UI_2.exe.config
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\bin\Debug\Rasp_UI_2.exe
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\bin\Debug\Rasp_UI_2.pdb
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\bin\Debug\MetroFramework.Design.dll
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\bin\Debug\MetroFramework.dll
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.Home.resources
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.Properties.Resources.resources
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.csproj.GenerateResource.Cache
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.exe
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.pdb
+C:\Users\Carlos\Documents\GitHub\Rasp_UI\Rasp_UI_2\Rasp_UI_2\obj\Debug\Rasp_UI_2.Interface_Rasp_Values.resources
