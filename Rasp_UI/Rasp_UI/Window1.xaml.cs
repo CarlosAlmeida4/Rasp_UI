@@ -29,23 +29,30 @@ namespace Rasp_UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            TcpClient tcpclnt = new TcpClient();
-            Console.WriteLine("Connecting.....");
+           
+                TcpClient tcpclnt = new TcpClient();
+                Console.WriteLine("Connecting.....");
 
-            tcpclnt.Connect("192.168.1.83", 8001);
-            // use the ipaddress as in the server program
+                tcpclnt.Connect("192.168.1.83", 8001);
+                // use the ipaddress as in the server program
 
-            Console.WriteLine("Connected");
-            /*Console.Write("Enter the string to be transmitted : ");
+                Console.WriteLine("Connected");
 
-            String str = Console.ReadLine();
+            String str = "GPS"+'\r'+ '\n';
+
             Stream stm = tcpclnt.GetStream();
+
+            
 
             ASCIIEncoding asen = new ASCIIEncoding();
             byte[] ba = asen.GetBytes(str);
-            Console.WriteLine("Transmitting.....");
+ 
+            byte[] bc = new byte[str.Length];
 
-            stm.Write(ba, 0, ba.Length);
+            for (int i = 0; i < str.Length; i++)
+            {
+                bc[i] = Convert.ToByte(str[i]);
+            }
 
             byte[] bb = new byte[100];
             int k = stm.Read(bb, 0, 100);
@@ -53,9 +60,10 @@ namespace Rasp_UI
             for (int i = 0; i < k; i++)
                 Console.Write(Convert.ToChar(bb[i]));
 
-            tcpclnt.Close();*/
+            stm.Write(ba, 0, ba.Length);
 
-
+            tcpclnt.Close();
+     
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
