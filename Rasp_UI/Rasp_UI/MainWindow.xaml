@@ -18,7 +18,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Rasp_Connection" HorizontalAlignment="Left" Margin="356,55,-638,0" VerticalAlignment="Top" Width="282" Height="182" Click="Button_Click" Grid.Column="2"/>
+        <Button Content="Window1" HorizontalAlignment="Left" Margin="19,16,-301,0" VerticalAlignment="Top" Width="282" Height="182" Click="Button_Click" Grid.Column="2"/>
 
     </Grid>
 </Window>
