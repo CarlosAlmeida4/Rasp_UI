@@ -22,7 +22,7 @@ namespace Rasp_UI
     /// </summary>
     public partial class Window1 : Window
     {
-        TCP_connection TCP = new TCP_connection();
+        
         public Window1()
         {
             InitializeComponent();

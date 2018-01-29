@@ -34,31 +34,36 @@ namespace Rasp_UI
             this.tcpclnt.Close();
         }
 
-        public double[3] GPS_Information()
+        //Sends 1 command and reads 3 different values
+        public double[] GPS_Information()
         {
             String str = "GPS"+'\r'+ '\n';
+            double[] returner = new double[3];
 
+            // Initialize stream
             Stream stm = tcpclnt.GetStream();
-
+            //Encode
             ASCIIEncoding asen = new ASCIIEncoding();
+            //Turn the string into bytes
             byte[] ba = asen.GetBytes(str);
- 
-            byte[] bc = new byte[str.Length];
+            
+            
 
-            for (int i = 0; i < str.Length; i++)
-            {
-                bc[i] = Convert.ToByte(str[i]);
-            }
+            //Write the command to the server
+            stm.Write(ba, 0, ba.Length);
 
+            //Byte to receive tthe info from the server
+            //Receive Latitude
             byte[] bb = new byte[100];
             int k = stm.Read(bb, 0, 100);
-
+            
             for (int i = 0; i < k; i++)
                 Console.Write(Convert.ToChar(bb[i]));
 
-            stm.Write(ba, 0, ba.Length);
+            
+            
 
-            double[] returner = new double[3];
+            
 
             return returner;
         }

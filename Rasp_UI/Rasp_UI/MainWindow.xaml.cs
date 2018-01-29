@@ -24,6 +24,9 @@ namespace Rasp_UI
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        TCP_connection TCP = new TCP_connection();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +39,22 @@ namespace Rasp_UI
             this.Close();
             window.Show();
             
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            double[] GPS_Values = TCP.GPS_Information();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            TCP.Connect_TCP();
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            TCP.Disconnect_TCP();
         }
     }
 }

@@ -18,7 +18,20 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Window1" HorizontalAlignment="Left" Margin="19,16,-301,0" VerticalAlignment="Top" Width="282" Height="182" Click="Button_Click" Grid.Column="2"/>
+        <Button Content="Window1" HorizontalAlignment="Left" Margin="10,43,-125,0" VerticalAlignment="Top" Width="115" Height="74" Click="Button_Click" Grid.Column="2"/>
+        <Button Grid.ColumnSpan="3" Content="Open Connection" HorizontalAlignment="Left" Margin="10,143,-125,0" VerticalAlignment="Top" Width="115" Height="82" Click="Button_Click_2"/>
+        <Button Grid.ColumnSpan="3" Content="Close Connection" HorizontalAlignment="Left" Margin="10,247,-125,0" VerticalAlignment="Top" Width="115" Height="83" Click="Button_Click_3"/>
+        <Button Grid.ColumnSpan="3" Content="GPS Coordinates" HorizontalAlignment="Left" Margin="10,363,-125,0" VerticalAlignment="Top" Width="115" Height="79" Click="Button_Click_1" RenderTransformOrigin="0.53,1.063"/>
+        <DockPanel Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="463" LastChildFill="False" Margin="5,22,-143,0" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.5,0.5">
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
+        </DockPanel>
 
     </Grid>
 </Window>
