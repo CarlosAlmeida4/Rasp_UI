@@ -8,6 +8,7 @@ using System.IO;
 using System.Net;
 
 
+
 namespace Rasp_UI
 {
     class TCP_connection
@@ -39,15 +40,14 @@ namespace Rasp_UI
         {
             String str = "GPS"+'\r'+ '\n';
             double[] returner = new double[3];
-
+            
             // Initialize stream
             Stream stm = tcpclnt.GetStream();
             //Encode
             ASCIIEncoding asen = new ASCIIEncoding();
             //Turn the string into bytes
             byte[] ba = asen.GetBytes(str);
-            
-            
+    
 
             //Write the command to the server
             stm.Write(ba, 0, ba.Length);
@@ -57,38 +57,11 @@ namespace Rasp_UI
             byte[] bb = new byte[100];
             int k = stm.Read(bb, 0, 100);
 
-            int start_index = 0;
-            int m = 0;
-            for (int i = 0; i < k; i++)
-            {
-                Console.WriteLine("Char "+ i + " Has the value : "+ Convert.ToChar(bb[i]));
+            Auxiliary GPS = new Auxiliary();
+            returner=GPS.GPS_Calculus(bb, k);
 
-                if ((Convert.ToChar(bb[i]) == '/') && start_index != 0)
-                {
-                    returner[m] = BitConverter.ToChar(bb, start_index);
-                    start_index = i + 1;
-                    m = m + 1;
-                }
-                if ((Convert.ToChar(bb[i])== '/') && start_index == 0)
-                {
-                    returner[m] = BitConverter.ToChar(bb, start_index);
-                    start_index = i + 1;
-                    m=m+1;
-                }
-                
-                if (Convert.ToChar(bb[i]) == '\n' )
-                {
-                    returner[m] = BitConverter.ToChar(bb, start_index);
-                    start_index = i + 1;
-                     
-                }
-
-
-            }
 
             Console.WriteLine(" Latitude: " + returner[0].ToString() + "\n Longitude: " + returner[1].ToString() + "\n Speed: " + returner[2].ToString());
-               
-
 
             return returner;
         }

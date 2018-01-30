@@ -33,6 +33,7 @@ namespace Rasp_UI
         public MainWindow()
         {
             InitializeComponent();
+            TCP.Connect_TCP();
             MyMapControl.Map.Layers.Add(new TileLayer(KnownTileSources.Create()));
         }
 
