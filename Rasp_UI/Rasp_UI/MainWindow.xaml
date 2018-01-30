@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Rasp_UI"
         xmlns:xaml="clr-namespace:Mapsui.UI.Wpf;assembly=Mapsui.UI.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="617" Width="853" WindowStyle="ThreeDBorderWindow" Opacity="0.5">
+        Title="MainWindow" Height="617" Width="853" WindowStyle="ThreeDBorderWindow" Opacity="0.5"
+        >
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
@@ -19,10 +20,9 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <DockPanel Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="318" LastChildFill="False" Margin="22,26,-138,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5">
+        <DockPanel Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="236" LastChildFill="False" Margin="22,26,-138,0" VerticalAlignment="Top" Width="116" RenderTransformOrigin="0.5,0.5">
             <Button Content="Window1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="74" Click="Button_Click" DockPanel.Dock="Top"/>
             <Button Content="Open Connection" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="82" Click="Button_Click_2" DockPanel.Dock="Top"/>
-            <Button Content="Close Connection" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="83" Click="Button_Click_3" DockPanel.Dock="Top"/>
             <Button Content="GPS Coordinates" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="79" Click="Button_Click_1" RenderTransformOrigin="0.53,1.063" DockPanel.Dock="Top"/>
         </DockPanel>
         <xaml:MapControl Name="MyMapControl" Grid.ColumnSpan="3" Margin="186,26,-819,94"></xaml:MapControl>

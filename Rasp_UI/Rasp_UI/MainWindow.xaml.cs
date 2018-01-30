@@ -17,6 +17,7 @@ using System.IO;
 using System.Net;
 using BruTile.Predefined;
 using Mapsui.Layers;
+using Rasp_UI;
 
 
 namespace Rasp_UI
@@ -58,6 +59,7 @@ namespace Rasp_UI
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             TCP.Disconnect_TCP();
+
         }
     }
 }

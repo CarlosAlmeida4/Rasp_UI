@@ -60,11 +60,6 @@ namespace Rasp_UI
             for (int i = 0; i < k; i++)
                 Console.Write(Convert.ToChar(bb[i]));
 
-            
-            
-
-            
-
             return returner;
         }
 
