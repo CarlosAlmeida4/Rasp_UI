@@ -18,6 +18,13 @@ using System.Net;
 using BruTile.Predefined;
 using Mapsui.Layers;
 using Rasp_UI;
+using Mapsui.Geometries;
+using Mapsui.Projection;
+using Mapsui.Utilities;
+using Mapsui.Geometries.WellKnownText;
+using Mapsui.Providers;
+using Mapsui.Styles;
+
 
 
 namespace Rasp_UI
@@ -29,6 +36,7 @@ namespace Rasp_UI
     {
 
         TCP_connection TCP = new TCP_connection();
+
 
         public MainWindow()
         {
@@ -49,18 +57,16 @@ namespace Rasp_UI
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             double[] GPS_Values = TCP.GPS_Information();
-        }
+            var point = new Mapsui.Geometries.Point(GPS_Values[1], GPS_Values[0]);
+            var sphericalMercatorCoordinate = SphericalMercator.FromLonLat(point.X, point.Y);
+            MyMapControl.Map.NavigateTo(sphericalMercatorCoordinate);
+            MyMapControl.Map.NavigateTo(MyMapControl.Map.Resolutions[18]);
+            MyMapControl.Map.Layers.Add(OpenStreetMap.CreateTileLayer());
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            TCP.Connect_TCP();
-
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            TCP.Disconnect_TCP();
+            MyMapControl.Map.Layers.Add(Auxiliary.CreatePointLayer(sphericalMercatorCoordinate));
 
         }
+        
+
     }
 }

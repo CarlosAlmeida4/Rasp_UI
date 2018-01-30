@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rasp_UI;
+using Mapsui.Geometries;
+using Mapsui.Projection;
+using Mapsui.Utilities;
+using Mapsui.Geometries.WellKnownText;
+using Mapsui.Providers;
+using Mapsui.Styles;
+using Mapsui.Layers;
 
 namespace Rasp_UI
 {
@@ -60,6 +68,21 @@ namespace Rasp_UI
 
             return returner;
 
+        }
+
+        public static Layer CreatePointLayer(Mapsui.Geometries.Point point)
+        {
+            var features = new Features
+            {
+                new Feature {Geometry = point},
+            };
+            var dataSource = new MemoryProvider(features) { CRS = "EPSG:4326" };
+
+            return new Layer
+            {
+                DataSource = dataSource,
+                Name = "WGS84 Point"
+            };
         }
     }
 }

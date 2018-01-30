@@ -61,7 +61,7 @@ namespace Rasp_UI
             returner=GPS.GPS_Calculus(bb, k);
 
 
-            Console.WriteLine(" Latitude: " + returner[0].ToString() + "\n Longitude: " + returner[1].ToString() + "\n Speed: " + returner[2].ToString());
+            //Console.WriteLine(" Latitude: " + returner[0].ToString() + "\n Longitude: " + returner[1].ToString() + "\n Speed: " + returner[2].ToString());
 
             return returner;
         }
