@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using System.Net.Sockets;
 using System.IO;
 using System.Net;
+using BruTile.Predefined;
+using Mapsui.Layers;
 
 
 namespace Rasp_UI
@@ -30,6 +32,7 @@ namespace Rasp_UI
         public MainWindow()
         {
             InitializeComponent();
+            MyMapControl.Map.Layers.Add(new TileLayer(KnownTileSources.Create()));
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
