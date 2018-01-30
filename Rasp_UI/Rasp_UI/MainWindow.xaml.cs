@@ -37,6 +37,10 @@ namespace Rasp_UI
 
         TCP_connection TCP = new TCP_connection();
 
+        //public int Longitude { get; set; }
+        //public int Latitude { get; set; }
+
+
 
         public MainWindow()
         {
@@ -62,11 +66,33 @@ namespace Rasp_UI
             MyMapControl.Map.NavigateTo(sphericalMercatorCoordinate);
             MyMapControl.Map.NavigateTo(MyMapControl.Map.Resolutions[18]);
             MyMapControl.Map.Layers.Add(OpenStreetMap.CreateTileLayer());
-
             MyMapControl.Map.Layers.Add(Auxiliary.CreatePointLayer(sphericalMercatorCoordinate));
 
         }
-        
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            
+            var sphericalMercatorCoordinate = SphericalMercator.FromLonLat(Convert.ToDouble(Longitude.Text), Convert.ToDouble(Latitude.Text));
+            MyMapControl.Map.NavigateTo(sphericalMercatorCoordinate);
+            MyMapControl.Map.NavigateTo(MyMapControl.Map.Resolutions[18]);
+            MyMapControl.Map.Layers.Add(OpenStreetMap.CreateTileLayer());
+            MyMapControl.Map.Layers.Add(Auxiliary.CreatePointLayer(sphericalMercatorCoordinate));
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
